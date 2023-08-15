@@ -30,4 +30,5 @@ public class DemoController {
         // call to the interface using reference of Coach
         return myCoach.getDailyWorkout();
     }
+
 }
