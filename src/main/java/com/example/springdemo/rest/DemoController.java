@@ -12,9 +12,19 @@ public class DemoController {
     // define a private field for the dependency
     private Coach myCoach;
 
+    // calling this TennisCoach class using Component annotations
+    // define a constructor for the dependency injection
+//    @Autowired
+//    public DemoController(@Qualifier("tennisCoach") Coach theCoach){
+//        System.out.println("In Constructor: "+ getClass().getSimpleName());
+//        myCoach = theCoach;
+//    }
+
+
+    // calling this SwimCoach class using bean and configuration annotations
     // define a constructor for the dependency injection
     @Autowired
-    public DemoController(@Qualifier("tennisCoach") Coach theCoach){
+    public DemoController(@Qualifier("swimCoach") Coach theCoach){
         System.out.println("In Constructor: "+ getClass().getSimpleName());
         myCoach = theCoach;
     }
